@@ -16,7 +16,7 @@ public class KafkaConsumerService {
 
     @KafkaListener(topics = "msgTopic", containerFactory = "fixMsgKafkaListenerContainerFactory")
     public void fixMsgListen(FixMsgModel fixMsgModel) {
-        System.out.println("Received msg - " + fixMsgModel.toString() + "-" + Long.toString(new Date().getTime()));
+        System.out.println("Received msg - " + fixMsgModel.toString() + "-" + Long.toString(new Date().getTime() - fixMsgModel.getCurrentDate()));
     }
 
 

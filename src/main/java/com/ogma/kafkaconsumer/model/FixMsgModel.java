@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 public class FixMsgModel {
     private String fixMsgName;
     private String fixMsgType;
+    private Long currentDate;
 
     public String getFixMsgName() {
         return fixMsgName;
@@ -21,6 +22,14 @@ public class FixMsgModel {
 
     public void setFixMsgType(String fixMsgType) {
         this.fixMsgType = fixMsgType;
+    }
+
+    public Long getCurrentDate() {
+        return currentDate;
+    }
+
+    public void setCurrentDate(Long currentDate) {
+        this.currentDate = currentDate;
     }
 
     @Override
